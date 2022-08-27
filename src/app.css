@@ -1,8 +1,9 @@
 :root {
   --border-radius: 5px;
   --main-text-color: #ffffff;
-  --inactive-color: #CFE4FA;
-
+  --inactive-color: #c6cde0;
+  --inactive-color-2: #f5f5fa;
+  --inactive-color-3: #afafb4;
 
   font-family: "Oxygen Mono", Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;

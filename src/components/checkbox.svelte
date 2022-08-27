@@ -15,7 +15,7 @@
             <div class="checkbox-fill" class:active={checked}></div>
         </div>
 
-        <label for={checkboxId} class="checkbox-label">{label}</label>
+        <label for={checkboxId} class:active={checked} class="checkbox-label">{label}</label>
 
         <input
             type="checkbox"
@@ -27,37 +27,42 @@
 
 <style lang="scss">
     .checkbox-row {
-      display: flex;
-      font-size: 1.2rem;
-      margin: 1.5rem 0;
-      align-items: center;
-      width: 100%;
+        display: flex;
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+        align-items: center;
+        width: 100%;
     }
 
     .checkbox-label {
-      margin-left: 1.25rem;
+        margin-left: 1.25rem;
+        color: var(--inactive-color);
+
+        &.active {
+            color: var(--main-text-color);
+        }
     }
 
     .checkbox-outside {
-      cursor: pointer;
-      user-select: none;
-      height: 30px;
-      width: 30px;
-      display: flex;
-      place-items: center;
-      background: var(--inactive-color);
-      border-radius: var(--border-radius);
+        cursor: pointer;
+        user-select: none;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        place-items: center;
+        background: var(--inactive-color);
+        border-radius: var(--border-radius);
     }
 
     .checkbox-fill {
-      background: #91CBF1;
-      height: 24px;
-      width: 24px;
-      margin: 3px;
-      border-radius: 2px;
+        background: #91CBF1;
+        height: 24px;
+        width: 24px;
+        margin: 3px;
+        border-radius: 2px;
 
-      &.active {
-        background: var(--main-text-color);
-      }
+        &.active {
+            background: var(--main-text-color);
+        }
     }
 </style>
