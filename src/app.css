@@ -1,0 +1,37 @@
+:root {
+  --border-radius: 5px;
+  --main-text-color: #ffffff;
+  --inactive-color: #CFE4FA;
+
+
+  font-family: "Oxygen Mono", Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+ #app {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   place-items: center;
+   background: linear-gradient(246.75deg, rgba(171, 133, 252, 0.62) 13.61%, rgba(41, 141, 233, 0.73) 59.38%, rgba(40, 217, 206, 0.73) 100%) fixed;
+ }
