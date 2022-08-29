@@ -2,6 +2,8 @@
     import Slider from './slider.svelte';
 
     export let length: number = 8;
+    export let minLength: number = 6;
+    export let maxLength: number = 100;
 </script>
 
 <section class="length-section">
@@ -10,7 +12,7 @@
         <span class="length-value">{length}</span>
     </div>
 
-    <Slider bind:value={length} />
+    <Slider bind:value={length} min={minLength} max={maxLength} />
 </section>
 
 <style>

@@ -12,7 +12,7 @@
 </script>
 
 
-<div class="copy-password">
+<div class="copy-password" on:click={copyToClipboard}>
     {#if password}
         <p class="copy-password-text">{password}</p>
     {:else}
@@ -43,7 +43,12 @@
 
     .copy-password-text {
         font-size: 2rem;
-        margin: 0;
+        margin: 0 1rem 0 0;
+        max-width: 100%;
+        line-height: 1.5;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
 
         &.placeholder {
           color: var(--inactive-color);

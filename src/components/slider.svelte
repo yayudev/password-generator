@@ -2,11 +2,11 @@
     import {handle} from '../lib/slider';
 
     export let value: number = 0;
-
-    const STEPS = 24;
+    export let min: number = 0;
+    export let max: number = 100;
     let sliderBox;
 
-    $: percentage = ((value-1)/(STEPS-1)) * 100;
+    $: percentage = ((value-min)/(max-min)) * 100;
 
     function onClick({offsetX}) {
         if (!sliderBox) return;
@@ -14,9 +14,9 @@
         const {offsetWidth} = sliderBox;
 
         const percentage = offsetX / offsetWidth;
-        const position = percentage * STEPS;
+        const position = percentage * (max - min);
         const approxPosition = Math.max(1, position);
-        const nextPosition = Math.ceil(approxPosition);
+        const nextPosition = Math.ceil(approxPosition) + min;
 
         console.log({ approxPosition, nextPosition, value })
 
@@ -31,24 +31,24 @@
         }
 
         if (value < approxPosition) {
-            value = Math.min(value + 1, STEPS);
+            value = Math.min(value + 1, max);
         }
     }
 
     function onDrag(event) {
         const {detail} = event;
-        const position = (detail / 1) * STEPS;
+        const position = detail * (max - min);
 
-        value = Math.ceil(Math.max(1, position));
+        value = Math.ceil(Math.max(min, position + min));
     }
 </script>
 
 
-<input type="range" min="1" max={STEPS} bind:value={value} hidden />
+<input type="range" min={min} max={max} bind:value={value} hidden />
 <div class="slider-box" bind:this={sliderBox} on:click={onClick}>
     <div class="slider-progress" style:width="{percentage}%" ></div>
     <div class="slider-button"
-         style:left="calc({percentage}% - {STEPS}px)"
+         style:left="calc({percentage}% - 24px)"
          use:handle
          on:click|stopPropagation
          on:drag={onDrag}
@@ -79,12 +79,12 @@
 
     .slider-button {
         background: var(--main-text-color);
-        height: 45px;
-        width: 45px;
+        height: 48px;
+        width: 48px;
         border-radius: 50%;
         border: 1px solid var(--inactive-color-3);
         position: absolute;
-        top: -15px; /* 15px up + 15px bar + 15px down*/
+        top: -16px; /* 16px up + 16px bar + 16px down*/
         right: 0;
         cursor: grab;
 

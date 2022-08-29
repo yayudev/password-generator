@@ -5,6 +5,11 @@
   --inactive-color-2: #f5f5fa;
   --inactive-color-3: #afafb4;
 
+  --bars-danger: #ff4141;
+  --bars-warn: #f6f649;
+  --bars-safe: #25b025;
+
+
   font-family: "Oxygen Mono", Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
