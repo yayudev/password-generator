@@ -61,7 +61,7 @@
         position: relative;
         background-color: var(--inactive-color);
         border-radius: 2px;
-        height: 15px;
+        height: 16px;
         width: 90%;
         margin: 1.5rem auto;
         cursor: pointer;
@@ -91,5 +91,18 @@
         &:active {
             cursor: grabbing;
         }
+    }
+
+    @media screen and (max-width: 480px) {
+        .slider-box {
+          height: 12px;
+          width: 75%;
+        }
+
+      .slider-button {
+        height: 36px;
+        width: 36px;
+        top: -12px; /* 12px up + 12px bar + 12px down*/
+      }
     }
 </style>

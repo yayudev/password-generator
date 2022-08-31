@@ -31,4 +31,12 @@
         align-items: center;
         font-size: 1.5rem;
     }
+
+    @media screen and (max-width: 480px) {
+        .strength-container {
+            margin: .5rem .5rem .5rem .5rem;
+            padding: 0 1rem;
+            font-size: 1.25rem;
+        }
+    }
 </style>

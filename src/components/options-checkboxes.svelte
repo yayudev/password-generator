@@ -16,5 +16,13 @@
     .options {
         padding: 0 1.5rem;
         margin: 0 1rem;
+        text-align: start;
+    }
+
+    @media screen and (max-width: 480px) {
+        .options {
+            padding: 0 .25rem;
+            margin: 0 .25rem;
+        }
     }
 </style>

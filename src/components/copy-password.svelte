@@ -1,4 +1,5 @@
 <script lang="ts">
+    import copy from 'copy-to-clipboard';
     import copyIcon from '../assets/icons/copy.svg';
 
     export let placeholder: string = "P4$5w0rD!";
@@ -7,7 +8,7 @@
     function copyToClipboard() {
         if (!password) return;
 
-        navigator.clipboard.writeText(password);
+        copy(password);
     }
 </script>
 
@@ -46,7 +47,7 @@
         margin: 0 1rem 0 0;
         max-width: 100%;
         line-height: 1.5;
-        overflow: hidden;
+        overflow-x: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
 

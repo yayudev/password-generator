@@ -54,4 +54,11 @@
         &:nth-child(2) { height: 50%; }
         &:nth-child(3) { height: 75%; }
     }
+
+    @media screen and (max-width: 480px) {
+        .bars-container {
+          width: 50px;
+          height: 30px;
+        }
+    }
 </style>

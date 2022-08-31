@@ -65,4 +65,11 @@
             background: var(--main-text-color);
         }
     }
+
+    @media screen and (max-width: 480px) {
+        .checkbox-label {
+          font-size: 1rem;
+          margin-left: .5rem;
+        }
+    }
 </style>

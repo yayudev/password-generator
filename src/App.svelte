@@ -64,11 +64,12 @@
         width: 95%;
         max-width: 780px;
         text-align: center;
+        box-sizing: border-box;
     }
 
     .title {
         letter-spacing: 2px;
-         margin-bottom: 3rem;
+        margin-bottom: 3rem;
     }
 
     .content-box {
@@ -76,5 +77,17 @@
         border-radius: var(--border-radius);
         margin: 1.5rem 0;
         padding: 1rem;
+    }
+
+    @media screen and (max-width: 480px) {
+        .content-box {
+          padding: .25rem;
+        }
+
+      .title {
+        letter-spacing: 2px;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
     }
 </style>
